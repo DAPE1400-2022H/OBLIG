@@ -1,6 +1,6 @@
 package OBLIG2;
-import static javax.swing.JOptionPane.*;
 
+import static javax.swing.JOptionPane.*;
 
 class Tallspill {
      public  int Tall;
@@ -32,14 +32,14 @@ class Tallspill {
         int s , t =0;
        while(true){
            try{
-               s = Integer.parseInt(showInputDialog("jeg tenker på et tall mellom 0 og 200" + "\n" + " prøv å gjett tallet:"));
+               s = Integer.parseInt(showInputDialog("Jeg tenker på et tall mellom 0 og 200" + "\n" + " prøv å gjett tallet:"));
 
            }catch (Exception e){
                s=-1;
            }
            if(s == -1){
 
-               visMelding("Talle er ugyldig");
+               visMelding("Tallet er ugyldig");
                continue;
            }
 
@@ -68,7 +68,7 @@ public class oppgave2 {
 
     while(true){
 
-        s = Integer.parseInt(showInputDialog("for å kjør spillet skriv 1" + "\n"+ "for å avslutte spillet skriv 2"  ));
+        s = Integer.parseInt(showInputDialog("For å kjør spillet skriv 1" + "\n"+ "For å avslutte spillet skriv 2"  ));
 
         switch (s){
             case 1 : {
@@ -84,9 +84,5 @@ public class oppgave2 {
 
 
     }
-
-
-
-
     }
 }
