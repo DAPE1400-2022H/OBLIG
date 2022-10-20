@@ -63,7 +63,7 @@ class Tallspill {
 public class oppgave2 {
     public static void main(String args []){
         Tallspill spill= new Tallspill();
-    int s , o=0;
+        int s , o=0;
 
 
     while(true){

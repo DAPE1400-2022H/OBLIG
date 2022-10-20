@@ -17,7 +17,7 @@ public class oppgave1 {
             }
             else if(overst==nederst){
                 showMessageDialog(null, "Du må skriv in gyldig tall");
-                nederst= 0;
+
                 overst=-1;
             }
 
