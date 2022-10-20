@@ -3,32 +3,29 @@ import static javax.swing.JOptionPane.*;
 
 
 class Tallspill {
-     public static int Tall;
-
-    public static int nyttTall() {
-
-
+     public  int Tall;
+    public  int nyttTall() {
         return (int) (Math.random() * 201);
     }
 
-    public static void visMelding(String melding){
+    public void visMelding(String melding){
         showMessageDialog(null, melding);
     }
 
-    private static void forLite(int tall){
+    private void forLite(int tall){
         visMelding( tall +" er for lite" + "\n" + "prøv igjen!");
    }
 
-    private static void forStort(int tall) {
+    private void forStort(int tall) {
         visMelding( tall +" er for stort" + "\n" + "prøv igjen!");
 
     }
 
-    public static void avsluttRunde(int antall, int gjetning) {
+    public void avsluttRunde(int antall, int gjetning) {
         visMelding( gjetning + " er riktig " + "\n" + "du gjettet riktig på "+ antall+ " forsøk");
     }
 
-    public static void kjørSpill() {
+    public void kjørSpill() {
 
         Tall =   nyttTall();
 
@@ -65,6 +62,7 @@ class Tallspill {
 }
 public class oppgave2 {
     public static void main(String args []){
+        Tallspill spill= new Tallspill();
     int s , o=0;
 
 
@@ -74,8 +72,7 @@ public class oppgave2 {
 
         switch (s){
             case 1 : {
-                Tallspill.kjørSpill();
-
+                spill.kjørSpill();
                 break;
             }
             case 2: o=-1; break;
