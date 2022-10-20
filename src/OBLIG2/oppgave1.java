@@ -31,6 +31,10 @@ public class oppgave1 {
             }
             System.out.print(" "+i + " +");
             sum+=i;
+            if(i%10 == 0){
+                System.out.println();
+                // test
+            }
         }
 
 
