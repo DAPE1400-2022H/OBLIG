@@ -32,7 +32,7 @@ class Tallspill {
         int s , t =0;
        while(true){
            try{
-               s = Integer.parseInt(showInputDialog("Jeg tenker på et tall mellom 0 og 200" + "\n" + " prøv å gjett tallet:"));
+               s = Integer.parseInt(showInputDialog("Jeg tenker på et tall mellom 0 og 200" + "\n" + " prøv å gjette tallet:"));
 
            }catch (Exception e){
                s=-1;
