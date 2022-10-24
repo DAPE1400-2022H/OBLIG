@@ -8,22 +8,28 @@ import java.util.*;
    public UnikeTall(int l) {
        list = new int[l];
    }
-   public boolean sjekk(int x){
+     public boolean sjekk(int x){
+        for(int i=0; i<list.length; i++){
+            if(x == list[i]){
+                return false;
+            }
 
-       return (Arrays.binarySearch(list, x)) < 0;
-   }
-   public void fyll(){
-       int x;
-       for(int i=0; i< list.length; i++){
-           x = (int)(Math.random()*(900)+100);
-           if(sjekk(x)){
-               list[i] = x;
-           }
-           else{
-               i-=1;
-           }
-       }
-   }
+        }
+        return true;
+     }
+     public void fyll(){
+         int x;
+         for(int i=0; i< list.length; i++){
+             x = (int)(Math.random()*11);
+             if(sjekk(x)){
+                 list[i] = x;
+             }
+             else{
+                 i--;
+             }
+         }
+     }
+
    public int max(){
        int y = list.length;
        Arrays.sort(list);
@@ -47,7 +53,7 @@ import java.util.*;
            if(i%10==0){
                 s+= "\n";
            }
-           s = s + list[i] + " ";
+           s += list[i] + " ";
        }
     showMessageDialog(null,  s + "\n minste tallet er " + min() + "\n største tallet er " + max() + "\n gjennomsnittet er "+ gjennomsnitt() );
 
@@ -74,7 +80,8 @@ public class oppgave1 {
 
     UnikeTall tall = new UnikeTall(l);
     tall.fyll();
-    tall.finish();
+
+  tall.finish();
 
     }
 
