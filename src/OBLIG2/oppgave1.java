@@ -21,7 +21,6 @@ public class oppgave1 {
                 overst=-1;
             }
 
-
         }
         for(int i=nederst ; i<=overst; i++){
             if(i==overst){
