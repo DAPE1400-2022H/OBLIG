@@ -29,14 +29,15 @@ import java.util.*;
          }
      }
 
+     public int min(){
+         Arrays.sort(list);
+         return list[0];
+     }
    public int max(){
        Arrays.sort(list);
        return list[list.length - 1];
    }
-   public int min(){
-       Arrays.sort(list);
-       return list[0];
-   }
+
    public double gjennomsnitt(){
         double sum =0;
         for (int i=0; i<list.length; i++){
@@ -47,12 +48,13 @@ import java.util.*;
    public void finish(){
        String s= "   ";
        for(int i=0; i<list.length; i++){
-           if(i%10==0){
+           if(i%8==0){
                 s+= "\n";
            }
            s += list[i] + " ";
        }
-    showMessageDialog(null,  s + "\n minste tallet er " + min() + "\n største tallet er " + max() + "\n gjennomsnittet er "+ String.format("%.2f",gjennomsnitt()) );
+    showMessageDialog(null,  s + "\nMinste tall er " + min() +
+            "\nStørste tall er " + max() + "\nGjennomsnittet er "+ String.format("%.2f",gjennomsnitt()) );
    }
 
 }
@@ -62,14 +64,14 @@ public class oppgave1 {
         int l=0;
         while(true){
             try{
-                l = Integer.parseInt(showInputDialog("skriv inn arrays lengde"));
+                l = Integer.parseInt(showInputDialog("Skriv inn arrays lengde"));
                 if(l<=0){
-                    showMessageDialog(null,"tallet må være større enn 0");
+                    showMessageDialog(null,"Tallet må være større enn 0");
                     continue;
                 }
                 break;
             }catch (Exception e){
-               showMessageDialog(null, "skriv inn gyldig nummer");
+               showMessageDialog(null, "Skriv inn gyldig tall");
             }
         }
     UnikeTall tall = new UnikeTall(l);
@@ -77,7 +79,4 @@ public class oppgave1 {
     tall.finish();
 
     }
-
-
-
 }
