@@ -40,6 +40,10 @@ import java.util.*;
 
    public double gjennomsnitt(){
         double sum =0;
+
+//        for(int i: list){
+//            sum+= i;
+//        }
         for (int i=0; i<list.length; i++){
             sum+= list[i];
         }
